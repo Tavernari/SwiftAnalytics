@@ -1,0 +1,22 @@
+{
+  "name": "SwiftAnalytics",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftAnalytics.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Tavernari/SwiftAnalytics",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Tavernari": "victortavernari@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Tavernari/SwiftAnalytics.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "SwiftAnalytics/Classes/**/*"
+}

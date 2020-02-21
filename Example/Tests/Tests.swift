@@ -1,50 +1,29 @@
-// https://github.com/Quick/Quick
-
-import Quick
-import Nimble
+import XCTest
 import SwiftAnalytics
 
-class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
+class Tests: XCTestCase {
 
-            it("can do maths") {
-                expect(1) == 2
+    override class func setUp() {
+        super.setUp()
+        SwiftAnalytics.removeAllBrokers()
+    }
+    
+    func testRegisterAndUnregisterBroker() {
+        let broker1 = "broker1"
+        let broker2 = "broker2"
+        let eventName1 = "eventName1"
+        let eventName2 = "eventName2"
+        SwiftAnalytics.registerBroker(name: broker1) { (name, _) -> Bool in
+            XCTAssertEqual(name, eventName1)
+            SwiftAnalytics.unregisterBroker(name: broker1)
+            SwiftAnalytics.registerBroker(name: broker2) { (name, _) -> Bool in
+                XCTAssertEqual(name, eventName2)
+                return true
             }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
+            return true
         }
+
+        AnalyticsEvent(name: eventName1).dispatch(params: [:])
+        AnalyticsEvent(name: eventName2).dispatch(params: [:])
     }
 }
