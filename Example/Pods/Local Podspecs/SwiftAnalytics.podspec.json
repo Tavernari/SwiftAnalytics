@@ -1,6 +1,6 @@
 {
   "name": "SwiftAnalytics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "SwiftAnalytics is a tool to implement all calls to event easyly",
   "swift_versions": [
     "5.0",
@@ -18,7 +18,7 @@
   },
   "source": {
     "git": "https://github.com/Tavernari/SwiftAnalytics.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "10.0"
