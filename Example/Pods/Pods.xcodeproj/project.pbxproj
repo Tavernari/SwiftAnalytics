@@ -1518,6 +1518,38 @@
 			};
 			name = Debug;
 		};
+		377B05E3429593E9BDBC871C09E2461C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721A6E02C05034AEC5F7D36003CFC2A4 /* SwiftAnalytics.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftAnalytics/SwiftAnalytics-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics.modulemap";
+				PRODUCT_MODULE_NAME = SwiftAnalytics;
+				PRODUCT_NAME = SwiftAnalytics;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3B3FC530059B3A302E2DD9679160C4B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C65C2A652942BA90EE4738EA528F7A0 /* Nimble-Snapshots.xcconfig */;
@@ -1549,38 +1581,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		40073EADCCB2D73B779D8F3799409DAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 721A6E02C05034AEC5F7D36003CFC2A4 /* SwiftAnalytics.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftAnalytics/SwiftAnalytics-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics.modulemap";
-				PRODUCT_MODULE_NAME = SwiftAnalytics;
-				PRODUCT_NAME = SwiftAnalytics;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		41CAB2D3F6474AC6707C1B1237D2588D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1747,39 +1747,6 @@
 			};
 			name = Release;
 		};
-		87DF89FD487A99F2FD4AFC1FA546D080 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 721A6E02C05034AEC5F7D36003CFC2A4 /* SwiftAnalytics.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftAnalytics/SwiftAnalytics-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics.modulemap";
-				PRODUCT_MODULE_NAME = SwiftAnalytics;
-				PRODUCT_NAME = SwiftAnalytics;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		A8ABD3CE5BEDA9D361FC10CE8EB6F299 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CAA6E1785BD13AA59BB88F84B476207 /* Pods-SwiftAnalytics_Tests.debug.xcconfig */;
@@ -1813,6 +1780,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A8D3FA153F91C3FCB4963B584AD7D800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721A6E02C05034AEC5F7D36003CFC2A4 /* SwiftAnalytics.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftAnalytics/SwiftAnalytics-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftAnalytics/SwiftAnalytics.modulemap";
+				PRODUCT_MODULE_NAME = SwiftAnalytics;
+				PRODUCT_NAME = SwiftAnalytics;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2030,8 +2030,8 @@
 		B1E3B5AA515DE9FE433BB22852731145 /* Build configuration list for PBXNativeTarget "SwiftAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40073EADCCB2D73B779D8F3799409DAA /* Debug */,
-				87DF89FD487A99F2FD4AFC1FA546D080 /* Release */,
+				377B05E3429593E9BDBC871C09E2461C /* Debug */,
+				A8D3FA153F91C3FCB4963B584AD7D800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

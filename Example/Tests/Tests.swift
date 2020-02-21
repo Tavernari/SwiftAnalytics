@@ -1,5 +1,6 @@
 import XCTest
 import SwiftAnalytics
+import Nimble
 
 class Tests: XCTestCase {
 
@@ -14,10 +15,10 @@ class Tests: XCTestCase {
         let eventName1 = "eventName1"
         let eventName2 = "eventName2"
         SwiftAnalytics.registerBroker(name: broker1) { (name, _) -> Bool in
-            XCTAssertEqual(name, eventName1)
+            expect(name).to(equal(eventName1))
             SwiftAnalytics.unregisterBroker(name: broker1)
             SwiftAnalytics.registerBroker(name: broker2) { (name, _) -> Bool in
-                XCTAssertEqual(name, eventName2)
+                expect(name).to(equal(eventName2))
                 return true
             }
             return true
