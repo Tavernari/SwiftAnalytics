@@ -8,6 +8,5 @@ target 'SwiftAnalytics_Example' do
 
     pod 'Quick'
     pod 'FBSnapshotTestCase'
-    pod 'Nimble-Snapshots'
   end
 end
