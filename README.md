@@ -9,7 +9,22 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+To register a broker
+```swift 
+SwiftAnalytics.registerBroker(name: "AnalyticsService") { (name, params) -> Bool in
+    //Call your service here like Firebase, GameAnalytics, etc...
+    return true
+}
+```
+To call an Event
+```swift 
+AnalyticsEvent(name: "View will appear").dispatch(params: ["now":Date()])
+```
+
+To remove a broker
+```swift 
+SwiftAnalytics.unregisterBroker(name: "YOUR_BROKER_NAME")
+```
 
 ## Installation
 
