@@ -10,7 +10,7 @@ import Foundation
 import os.log
 
 public class SwiftAnalytics {
-    public typealias BrokerCallback = (String, [String:Any]) -> Bool
+    public typealias BrokerCallback = (String, [String:Any]?) -> Bool
     internal static var brokers: [String: BrokerCallback] = [:]
 
     internal static func dispatch(eventName: String, eventParams: [String:Any]) {

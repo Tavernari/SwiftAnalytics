@@ -10,7 +10,7 @@ import UIKit
 import SwiftAnalytics
 
 class FakeAnalytics {
-    static func call(name:String, params: [String: Any]){
+    static func call(name:String, params: [String: Any]?){
         print(name, params)
     }
 }

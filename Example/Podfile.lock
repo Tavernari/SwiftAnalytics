@@ -5,7 +5,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - Quick (1.2.0)
-  - SwiftAnalytics (0.1.0)
+  - SwiftAnalytics (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  SwiftAnalytics: 683a25b8d804ce7dce6d7e232433debf43832103
+  SwiftAnalytics: e38904792801dfb6620b53904c1fbc2c16a2f0e7
 
 PODFILE CHECKSUM: 01ffd23057d4a6c28b231487e2f6d4ab379908a7
 
