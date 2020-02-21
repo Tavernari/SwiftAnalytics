@@ -1,6 +1,6 @@
 # SwiftAnalytics
 
-[![CI Status](https://img.shields.io/travis/Tavernari/SwiftAnalytics.svg?style=flat)](https://travis-ci.com/Tavernari/SwiftAnalytics.svg?branch=master)
+[![CI Status](https://img.shields.io/travis/Tavernari/SwiftAnalytics.svg?style=flat)](https://api.travis-ci.com/Tavernari/SwiftAnalytics.svg)
 [![Version](https://img.shields.io/cocoapods/v/SwiftAnalytics.svg?style=flat)](https://cocoapods.org/pods/SwiftAnalytics)
 [![License](https://img.shields.io/cocoapods/l/SwiftAnalytics.svg?style=flat)](https://cocoapods.org/pods/SwiftAnalytics)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftAnalytics.svg?style=flat)](https://cocoapods.org/pods/SwiftAnalytics)
@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 To register a broker
 ```swift 
-SwiftAnalytics.registerBroker(name: "AnalyticsService") { (name, params) -> Bool in
+SwiftAnalytics.registerBroker(name: "YOUR_BROKER_NAME") { (name, params) -> Bool in
     //Call your service here like Firebase, GameAnalytics, etc...
     return true
 }
