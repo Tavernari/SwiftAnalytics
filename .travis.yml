@@ -41,7 +41,7 @@ script:
   - if [ -z "$TEST_SWIFTPM" ]; then
       xcodebuild
       "$ACTION"
-      -project "$FRAMEWORK_NAME.xcodeproj"
+      -project "Example/$FRAMEWORK_NAME.xcworkspace"
       -scheme "$FRAMEWORK_NAME-$SCHEME"
       -sdk "$SDK"
       -destination "$DESTINATION"
