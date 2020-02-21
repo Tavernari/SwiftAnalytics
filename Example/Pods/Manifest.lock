@@ -15,7 +15,6 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - Nimble
   - Nimble-Snapshots
   - Quick
   - SwiftAnalytics (from `../`)
@@ -38,6 +37,6 @@ SPEC CHECKSUMS:
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   SwiftAnalytics: 683a25b8d804ce7dce6d7e232433debf43832103
 
-PODFILE CHECKSUM: 41b9081076001e66c65b7794f3b1609aa5e04131
+PODFILE CHECKSUM: 76fbb624f3d4a69cc10f8b33d1a8d1d87156156b
 
 COCOAPODS: 1.8.4
