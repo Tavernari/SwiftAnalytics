@@ -14,7 +14,7 @@ public class AnalyticsEvent {
         self.name = name
     }
 
-    public func dispatch(params: [String: Any]) {
+    public func dispatch(params: [String: Any]?) {
         SwiftAnalytics.dispatch(eventName: self.name, eventParams: params)
     }
 }
