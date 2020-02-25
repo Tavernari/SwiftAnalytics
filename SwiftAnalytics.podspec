@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftAnalytics'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'SwiftAnalytics is a tool to implement all calls to event easyly'
   s.swift_versions   = [ "5.0", "4.2", "3.2" ]
 
