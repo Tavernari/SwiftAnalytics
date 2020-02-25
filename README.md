@@ -27,7 +27,7 @@ SwiftAnalytics.dispatch(event: ScreenEvent(name: eventName1))
 
 To creat your own event
 ```swift 
-public class CustonEvent: Event {
+public class CustomEvent: Event {
     public let name: String
     public let kind: Kind = .custom("MY OWN EVENT KIND")
     public var params: [String: Any]?
