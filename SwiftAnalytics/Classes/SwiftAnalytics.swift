@@ -10,20 +10,22 @@ import Foundation
 import os.log
 
 public class SwiftAnalytics {
-    public typealias BrokerCallback = (String, [String:Any]?) -> Bool
+    public typealias BrokerCallback = (Event) throws -> Void
     internal static var brokers: [String: BrokerCallback] = [:]
 
-    internal static func dispatch(eventName: String, eventParams: [String:Any]?) {
+    public static func dispatch(event: Event) {
         guard brokers.isEmpty == false else {
-            os_log("%{public}@ did not send, because brokers are empty", eventName)
+            os_log("%{public}@ did not send, because brokers are empty", event.name)
             return
         }
 
-        brokers.forEach({
-            if $0.value(eventName, eventParams) {
-                os_log("%{public}@ dispatched %{public}@", $0.key, eventName)
-            } else {
-                os_log("%{public}@ did not dispatch %{public}@", $0.key, eventName)
+        brokers.forEach({ broker in
+            do {
+                os_log("It will call %{public}@ with event %{public}@", broker.key, event.name)
+                try broker.value(event)
+                os_log("It did call %{public}@ with event %{public}@", broker.key, event.name)
+            } catch {
+                os_log("It did call with error %{public}@ ", error.localizedDescription)
             }
         })
     }

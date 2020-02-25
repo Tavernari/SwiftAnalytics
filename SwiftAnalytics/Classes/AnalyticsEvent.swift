@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class AnalyticsEvent {
-    private let name: String
-    public init(name: String) {
-        self.name = name
-    }
+public class AnalyticsEvent: Event {
+    public let name: String
+    public let kind: Kind = .event
+    public var params: [String: Any]? = nil
 
-    public func dispatch(params: [String: Any]?) {
-        SwiftAnalytics.dispatch(eventName: self.name, eventParams: params)
+    public init(name: String, params: [String: Any]? = nil) {
+        self.name = name
+        self.params = params
     }
 }

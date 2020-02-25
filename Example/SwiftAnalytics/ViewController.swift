@@ -12,6 +12,7 @@ import SwiftAnalytics
 class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AnalyticsEvent(name: "View will appear").dispatch(params: ["now":Date()])
+        SwiftAnalytics.dispatch(event: ScreenEvent(name: "ViewController"))
+        SwiftAnalytics.dispatch(event: AnalyticsEvent(name: "WillAppear", params: ["time":Date()]))
     }
 }

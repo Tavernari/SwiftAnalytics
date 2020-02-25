@@ -22,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        SwiftAnalytics.registerBroker(name: "AnalyticsService") { (name, params) -> Bool in
-            FakeAnalytics.call(name: name, params: params)
-            return true
+        SwiftAnalytics.registerBroker(name: "AnalyticsService") { event in
+            FakeAnalytics.call(name: event.name, params: event.params)
         }
 
         return true
