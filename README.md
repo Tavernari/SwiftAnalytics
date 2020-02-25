@@ -11,14 +11,32 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 To register a broker
 ```swift 
-SwiftAnalytics.registerBroker(name: "YOUR_BROKER_NAME") { (name, params) -> Bool in
+SwiftAnalytics.registerBroker(name: "AnalyticsService") { event in
     //Call your service here like Firebase, GameAnalytics, etc...
-    return true
 }
 ```
-To call an Event
+To call an analytic event
 ```swift 
-AnalyticsEvent(name: "View will appear").dispatch(params: ["now":Date()])
+SwiftAnalytics.dispatch(event: AnalyticsEvent(name: eventName1))
+```
+
+To call an screen event
+```swift 
+SwiftAnalytics.dispatch(event: ScreenEvent(name: eventName1))
+```
+
+To creat your own event
+```swift 
+public class CustonEvent: Event {
+    public let name: String
+    public let kind: Kind = .custom("MY OWN EVENT KIND")
+    public var params: [String: Any]?
+
+    public init(name: String, customParam:Int) {
+        self.name = name
+        self.params = ["custom": customParam]
+    }
+}
 ```
 
 To remove a broker
